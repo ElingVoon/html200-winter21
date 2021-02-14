@@ -1,10 +1,26 @@
 function bankApp() {
-  prompt('What would you like to do? \n\nEnter W to Withdraw\nEnter D to Deposit\nEnter B for Balance\nEnter Q to Quit');
+   prompt('What would you like to do? \n\nEnter W to Withdraw\nEnter D to Deposit\nEnter B for Balance\nEnter Q to Quit');
+ }
+
+const bankOption = 'withdraw';
+
+switch (bankOption) {
+  case 'withdraw':
+    alert('this.Amount to whthdraw?');
+
+  case 'deposit':
+    alert('Amount to deposit?');
+
+  case 'balance':
+    alert('Balance amount is $100');
+
+  default:
+    console.log('Quit?');
+    break;
 }
 
 
 
-(checkQPress);
 //swith
 //You can put function inside an object
 // const fourOption
