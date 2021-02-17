@@ -1,30 +1,61 @@
-function bankApp() {
-  prompt('What would you like to do? \n\nEnter W to Withdraw\nEnter D to Deposit\nEnter B for Balance\nEnter Q to Quit');
-}
+
+let x = Number("1000")
+let balance = 500;
+let lowBalance = 300;
+let bankApp = true;
+// let bankBalance = ('bankDeposit - bankWithdraw')
+
+while (bankApp) {
+  const bankOption = prompt('Enter \nW to Withdraw \nD to Deposit \nB for Balance \nQ to Quit');
+
+  switch (bankOption) {
+    case 'W':
+    const withdrawAmount = prompt('Enter a amount you want to withdraw');
+
+    if (withdrawAmount >= balance) {
+      alert('You do not have sufficient fund in your account');
+
+    } else if (withdrawAmount < balance) {
+      alert('You want to withdraw $' + withdrawAmount);
+      balance = balance - Number(withdrawAmount)
+  }
+    break;
+
+    case 'D':
+      const depositAmount = prompt('Enter a deposit amount');
+
+      if (depositAmount >= 50001) {
+        alert('There is a deposit cap of $50000');
+      } else if (depositAmount < 50000) {
+        alert('You want to deposit $' + depositAmount);
+        balance = balance + Number(depositAmount)
+        alert('Your new balance is $' + balance);
+      }
+      break;
+
+    case 'B':
+      alert('Your balance is $' + balance);
+      break;
+
+    case 'Q':
+      alert('Quit');
+      bankApp = false;
+      break;
+    }
+  }
 
 
 
-(checkQPress);
-//swith
-//You can put function inside an object
-// const fourOption
-//
-// switch(bankOption) {
-//   case withdraw:
-//     event.key == (w || W)
-//     break;
-//   case deposit:
-//     // code block
-//     break;
-//   case balance:
-//       // code block
-//     break;
-//   default:
-//     // code block
+
+  // prompt('Please enter a amount you want to withdraw')
+  // alert('You want to withdraw $' + withdrawAmount)
+  // balance = balance - Number(withdrawAmount)
+  // alert('Your balance is $' + balance);
+  // alert('You want to withdraw $' + withdrawAmount);
+  // alert('Your balance is $' + balance);
+// } else (withdrawAmount >= lowBalance) {
+//   alert('Your balance is $' + balance);
 // }
-
-
-
 
 // user has 4 options to choose from
 
@@ -34,7 +65,8 @@ function bankApp() {
 // enter d to deposit
     //enter how much to deposit
       //after deposit enter another option
-// enter b to Balance
+// enter b for Balance
+    //after checking balance, user should have access to other option
 // enter q to quit
 
 
