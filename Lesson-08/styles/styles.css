@@ -1,0 +1,17 @@
+* {
+	box-sizing: border-box;
+}
+
+.large-headline {
+	font-size: 2rem;
+	color: red;
+}
+
+.half-width {
+	width: 50%;
+	background-color: yellow;
+}
+
+.image-border {
+	border: 10px solid orange;
+}
